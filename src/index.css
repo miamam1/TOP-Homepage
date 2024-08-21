@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.aboutMeContainer {
+    background: linear-gradient(170deg,#2596be 70%, #F4F4F4 calc(70% + 2px));
+    
+    height: 100vh;
+    
+}
+ 
