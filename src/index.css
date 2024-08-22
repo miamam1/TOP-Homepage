@@ -1,13 +1,66 @@
 body, html{
     margin: 0;
     padding: 0;
-    display: grid;
-  
+
+    
 }
 
-.aboutMeContainer {
-    background: linear-gradient(165deg, #2596be 60%,  rgb(187, 181, 181) 0.5%, white calc(61% + 2px)); 
-    height: 100vh;
-    display: grid;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display';
 }
+
+
+
+.aboutMeContainer {
+    background: linear-gradient(150deg, #2596be 60%,  rgb(187, 181, 181) 0.5%, white calc(61% + 2px)); 
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.aboutMeImage {
+    min-height: 600px;
+    min-width: 350px;
+    background-image:url(./portfolioImage.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    -webkit-box-shadow: -2px -2px 27px -7px rgba(0,0,0,0.85);
+    -moz-box-shadow: -2px -2px 27px -7px rgba(0,0,0,0.85);
+    box-shadow: -2px -2px 27px -7px rgba(0,0,0,0.85);
+    
+}
+
+.aboutMeImage h1 {
+    font-size: 4rem;
+    color: black;
+}
+
+/* get mobile ver working -> use media queries to expand stuff (like said on odin). easier to visualize in my head i think */
+/* can worry about image optimisations when i get something working first */
+
+
+.aboutMeText {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials {
+    display: flex;
+    gap: 10px;
+}
+.socials button {
+    border: none;
+    background-color: transparent;
+    font-size: 1.6rem;
+}
+
 
