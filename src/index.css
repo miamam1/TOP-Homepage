@@ -1,12 +1,13 @@
-body {
+body, html{
     margin: 0;
     padding: 0;
+    display: grid;
+  
 }
 
 .aboutMeContainer {
-    background: linear-gradient(170deg,#2596be 70%, #F4F4F4 calc(70% + 2px));
-    
+    background: linear-gradient(165deg, #2596be 60%,  rgb(187, 181, 181) 0.5%, white calc(61% + 2px)); 
     height: 100vh;
-    
+    display: grid;
 }
- 
+
