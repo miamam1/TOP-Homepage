@@ -1,34 +1,29 @@
 body, html{
     margin: 0;
     padding: 0;
-
     
 }
-
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display';
 }
-
 p {
     font-family: 'Roboto'
 }
 
-
-
 .aboutMeContainer {
-    background: linear-gradient(150deg, #2596be 60%,  rgb(187, 181, 181) 0.5%, white calc(61% + 2px)); 
-    height: 100vh;
+    background: linear-gradient(145deg, #2596be 60%,  rgb(187, 181, 181) 0.5%, white calc(61% + 2px)); 
+    min-height: 100vh;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    padding-top: 20px;
+    gap: 50px;
 }
 
 .aboutMeImage {
     min-height: 600px;
-    min-width: 350px;
+    min-width: 300px;
     background-image:url(./portfolioImage.jpg);
     background-size: cover;
     display: flex;
@@ -40,22 +35,21 @@ p {
     padding-left: 10px;
     
 }
-
 .aboutMeImage h1 {
     font-size: 4rem;
     color: black;
 }
 
-/* get mobile ver working -> use media queries to expand stuff (like said on odin). easier to visualize in my head i think */
-/* can worry about image optimisations when i get something working first */
-
-
 .aboutMeText {
-    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+
+.textWrap {
+    display: none;
 }
 .aboutMeText p {
     padding-left: 20px;
@@ -63,6 +57,7 @@ p {
     font-size: 1.7rem;
     color: rgb(102, 102, 102);
 }
+
 .aboutMeText h1 {
     font-size: 2.5rem;
     padding: 0;
@@ -76,7 +71,274 @@ p {
 .socials button {
     border: none;
     background-color: transparent;
-    font-size: 2rem;
+    font-size: 2.7rem;
+}
+
+.myWorkContainer {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.projectsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.projectTile {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-shadow: -2px -2px 27px -7px rgba(0,0,0,0.85);
+    -moz-box-shadow: -2px -2px 27px -7px rgba(0,0,0,0.85);
+    box-shadow: -2px -2px 27px -7px rgba(0,0,0,0.85);
+}
+.imagePlaceholder {
+    background-color: orange;
+    height: 225px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ProjectNameContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.ProjectNameContainer button{
+    font-size: 25px;
+    border: none;
+    background-color: transparent;
+}
+
+.ProjectNameContainer svg {
+    width: 25px;
+    height: 25px;
+}
+
+.projectSocials {
+    display: flex;
+    gap: 10px;
+}
+
+.projectTile p {
+    color: rgb(102, 102, 102);
+    text-align: center;
+}
+
+.footerContainer {
+    min-height: 100vh;
+    background-color: #2596be;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.contactMeContainer {
+    max-width: 500px;
+    min-height: 500px;
+    background-color: transparent;
+    /* background-color: #145269; */
+}
+
+.contactMeContainer h1 {
+    color: white;
+}
+.contactMeContainer p {
+    color: white;
+}
+
+.phoneContainer {
+    display: flex;
+    gap: 1rem;
+}
+.phoneContainer svg {
+    width: 25px;
+    
+}
+
+.socialsFooter button{
+    font-size: 35px;
+    border: none;
+    background-color: transparent;
+}
+
+.imageFooterContainer {
+    width: 50%;
+    height: 50%;
+    
+}
+
+.imageFooterContainer img {
+    width: 100%;
+    height: 100%;
+    
+}
+
+
+@media (min-width: 830px) {
+    .aboutMeContainer {
+        background: linear-gradient(-193deg, #2596be 60%,  rgb(187, 181, 181) 0.5%, white calc(61% + 2px));
+        display: grid;
+        grid-template-columns: repeat(6, 17.5%);
+        grid-template-rows: repeat(6, 17.5%);
+        height: 100vh;
+    }
+
+    .aboutMeImage {
+        min-height: 450px;
+        min-width: 450px;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        z-index: 0;
+        
+    }
+
+    .aboutMeText {
+        display:block;
+        grid-column-start: 3;
+        grid-column-end: 6;
+        grid-row-start: 3;
+        background-color: white;
+        -webkit-box-shadow: -2px -2px 27px -7px rgba(0,0,0,0.85);
+        -moz-box-shadow: -2px -2px 27px -7px rgba(0,0,0,0.85);
+        box-shadow: -2px -2px 27px -7px rgba(0,0,0,0.85);
+    }
+
+    .textWrap {
+       display: block;
+        width: 275px;
+        height: 300px;
+        background-color: transparent;
+        float: left;
+    }
+
+    .aboutMeText h1 {
+        text-align: end;
+        margin-right: 20%;
+    }
+    .socials {
+        display: none;
+        
+    }
+    
+    .footerContainer {
+        margin-top: 20px;
+        padding: 20px;
+    }
+}
+
+
+@media (min-width: 1100px) {
+    .aboutMeContainer {
+        display: flex;
+        height: 100vh;
+        gap: 0px;
+    }
+
+    .aboutMeImage {
+        min-height: 600px;
+        min-width: 600px;
+    }
+
+    .aboutMeText {
+        max-width: 1000px;
+        max-height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 25px;
+    }
+
+
+    .textWrap {
+        display: none;
+    }
+    
+    .aboutMeText h1 {
+        margin-left: 2.2%;
+       
+      
+    }
+
+    .socials {
+       display: flex;
+        width: 95%;
+        justify-content: end;
+        
+    }
+}
+
+
+@media (min-width: 1099px) and (max-width: 1650px) {
+    .aboutMeText {
+        width: 500px;
+    }
+    .aboutMeText p {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 860px) and (max-width: 1400px){
+    .projectsGrid {
+        grid-template-columns: repeat(2, auto)
+    }
+    
+}
+
+
+@media (max-width: 860px) {
+    .projectsGrid {
+        grid-template-columns: repeat(1, auto);
+    }
+    .footerContainer {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .imageFooterContainer {
+        width: 100%;
+    }
+
+    .contactMeContainer {
+       text-align: center;
+    }
+    .contactMeContainer p {
+        text-align: start;
+        padding-left: 10px;
+    }
+    
+    
+
+}
+
+@media (max-width: 375px) {
+    .projectTile {
+        width: 250px;
+        height: 250px;
+    }
+
+    .imagePlaceholder h1{
+        font-size: 17.5px;
+    }
+
+    .ProjectNameContainer h2{
+        font-size: 1.3rem;
+    }
+
+    .projectTile p{
+        font-size: 0.75rem;
+    }
 }
 
 
